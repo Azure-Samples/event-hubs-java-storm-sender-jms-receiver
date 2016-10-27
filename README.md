@@ -72,7 +72,7 @@ SenderViaJMS is a Java project. ReciverViaStorm is a Maven project.
 
 Add library “Apache Qpid Client Libraries for JMS” into this project’s Java Build Path. The library will be automatically installed when installing Azure Toolkit for Eclipse.
 
-<img src="https://github.com/Azure-Samples/event-hubs-java-storm-sender-jms-receiver/tree/master/Images/1.png">
+<img src="https://github.com/Azure-Samples/event-hubs-java-storm-sender-jms-receiver/blob/master/Images/1.png">
 
 open servicebus.properties file and change below content to your actual value.
 
@@ -108,4 +108,4 @@ In Eclipse, run LogTopology class of ReceiverViaStorm to get it start for all pa
 
 Run SenderViaJMS to send messages, then you will see events appear on receiver window.
 
-<img src="https://github.com/Azure-Samples/event-hubs-java-storm-sender-jms-receiver/tree/master/Images/2.png">
+<img src="https://github.com/Azure-Samples/event-hubs-java-storm-sender-jms-receiver/blob/master/Images/2.png">
