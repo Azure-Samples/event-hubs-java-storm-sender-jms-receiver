@@ -22,23 +22,23 @@ http://wacn-ppe.chinacloudsites.cn/documentation/articles/event-hubs-overview/
 
 Java development environment, such as Eclipse and Maven, with JDK 8.
 
-•	JDK 8: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html  
+- JDK 8: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html  
 
-•	Eclipse: https://www.eclipse.org/
+- Eclipse: https://www.eclipse.org/
 
-•	Maven: http://maven.apache.org/
+- Maven: http://maven.apache.org/
 
 ## Required information
 
 An Azure Event Hub with two shared access policies; one that has listen permissions, and one that has write permissions. I will refer to these as "reader" and "writer", which is what I named mine
 
-•	The policy keys for the "reader" and "writer" policies
+- The policy keys for the "reader" and "writer" policies
 
-•	The name of your Event Hub
+- The name of your Event Hub
 
-•	The Service Bus namespace that your Event Hub was created in
+- The Service Bus namespace that your Event Hub was created in
 
-•	The number of partitions available with your Event Hub configuration
+- The number of partitions available with your Event Hub configuration
 
 For information on creating and using EventHubs, see the Create an Event Hub section of Get Started with EventHubs.
 
@@ -60,25 +60,25 @@ Add library “Apache Qpid Client Libraries for JMS” into this project’s Jav
 
 open servicebus.properties file and change below content to your actual value.
 
-•	SASPolicyName: previous created “writer” policy name
+- SASPolicyName: previous created “writer” policy name
 
-•	SASPolicyKey: previous created “writer” policy key with URL encoded. URL encode tool: http://www.w3schools.com/tags/ref_urlencode.asp
+- SASPolicyKey: previous created “writer” policy key with URL encoded. URL encode tool: http://www.w3schools.com/tags/ref_urlencode.asp
 
-•	Eventhub name: previous created event hub name
+- Eventhub name: previous created event hub name
 
 ### Configure ReceiverViaStorm
 
 Open Config.properties file and change below content to your actual value:
 
-•	eventhubspout.username={eventhub sas policy name}
+- eventhubspout.username={eventhub sas policy name}
 
-•	eventhubspout.password={eventhub sas policy key}
+- eventhubspout.password={eventhub sas policy key}
 
-•	eventhubspout.namespace={service bus namespace that eventhub was created in}
+- eventhubspout.namespace={service bus namespace that eventhub was created in}
 
-•	eventhubspout.entitypath={eventhub name}
+- eventhubspout.entitypath={eventhub name}
 
-•	eventhubspout.partitions.count={eventhub partitions count}
+- eventhubspout.partitions.count={eventhub partitions count}
 
 ## Running the Sample
 
