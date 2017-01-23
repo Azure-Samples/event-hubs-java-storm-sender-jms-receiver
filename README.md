@@ -9,21 +9,16 @@ author: msonecode
 ## Introduction
 
 An example of how to write data to Event Hub via JMS and read using Apache Storm topology (written in Java) on Azure.
-<br/>
-<br/>
-<br/>
 
 ## Prerequisites
 
-*__Azure EventHubs__*
+### Azure EventHubs
 
 Azure subscription with one event hub created under service bus namespace.
 
 http://wacn-ppe.chinacloudsites.cn/documentation/articles/event-hubs-overview/  
-<br/>
-<br/>
 
-*__JDK 8__*
+### JDK 8
 
 Java development environment, such as Eclipse and Maven, with JDK 8.
 
@@ -32,9 +27,6 @@ Java development environment, such as Eclipse and Maven, with JDK 8.
 •	Eclipse: https://www.eclipse.org/
 
 •	Maven: http://maven.apache.org/
-<br/>
-<br/>
-<br/>
 
 ## Required information
 
@@ -49,26 +41,18 @@ An Azure Event Hub with two shared access policies; one that has listen permissi
 •	The number of partitions available with your Event Hub configuration
 
 For information on creating and using EventHubs, see the Create an Event Hub section of Get Started with EventHubs.
-<br/>
-<br/>
-<br/>
-
 
 ## Building the Sample
 
-*__In Eclipse, install Azure Toolkit for Eclipse plugin__*
+### In Eclipse, install Azure Toolkit for Eclipse plugin
 
 http://wacn-ppe.chinacloudsites.cn/documentation/articles/azure-toolkit-for-eclipse-installation/
-<br/>
-<br/>
 
-*__Import the two projects into Eclipse__*
+### Import the two projects into Eclipse
 
 SenderViaJMS is a Java project. ReciverViaStorm is a Maven project.
-<br/>
-<br/>
 
-*__Configure SenderViaJMS__*
+### Configure SenderViaJMS
 
 Add library “Apache Qpid Client Libraries for JMS” into this project’s Java Build Path. The library will be automatically installed when installing Azure Toolkit for Eclipse.
 
@@ -81,10 +65,8 @@ open servicebus.properties file and change below content to your actual value.
 •	SASPolicyKey: previous created “writer” policy key with URL encoded. URL encode tool: http://www.w3schools.com/tags/ref_urlencode.asp
 
 •	Eventhub name: previous created event hub name
-<br/>
-<br/>
 
-*__Configure ReceiverViaStorm__*
+### Configure ReceiverViaStorm
 
 Open Config.properties file and change below content to your actual value:
 
@@ -97,10 +79,6 @@ Open Config.properties file and change below content to your actual value:
 •	eventhubspout.entitypath={eventhub name}
 
 •	eventhubspout.partitions.count={eventhub partitions count}
-<br/>
-<br/>
-<br/>
-
 
 ## Running the Sample
 
