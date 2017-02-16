@@ -8,7 +8,7 @@ author: msonecode
 
 ## Introduction
 
-An example of how to write data to Event Hub via JMS and read using Apache Storm topology (written in Java) on Azure.
+This example shows how to write data to Event Hub via JMS and read using Apache Storm topology (written in Java) on Azure.
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ Java development environment, such as Eclipse and Maven, with JDK 8.
 
 ## Required information
 
-An Azure Event Hub with two shared access policies; one that has listen permissions, and one that has write permissions. I will refer to these as "reader" and "writer", which is what I named mine
+An Azure Event Hub with two shared access policies: one has listening permissions, the other has writing permissions. I would prefer these as "reader" and "writer", which are what I named as mine.
 
 - The policy keys for the "reader" and "writer" policies
 
@@ -40,7 +40,7 @@ An Azure Event Hub with two shared access policies; one that has listen permissi
 
 - The number of partitions available with your Event Hub configuration
 
-For information on creating and using EventHubs, see the Create an Event Hub section of Get Started with EventHubs.
+For information about creating and using EventHubs, see the Create an Event Hub section of Get Started with EventHubs.
 
 ## Building the Sample
 
@@ -58,17 +58,17 @@ Add library “Apache Qpid Client Libraries for JMS” into this project’s Jav
 
 <img src="https://github.com/Azure-Samples/event-hubs-java-storm-sender-jms-receiver/blob/master/Images/1.png">
 
-open servicebus.properties file and change below content to your actual value.
+open servicebus.properties file and change below content with your actual value:
 
-- SASPolicyName: previous created “writer” policy name
+- SASPolicyName: previously created “writer” policy name
 
-- SASPolicyKey: previous created “writer” policy key with URL encoded. URL encode tool: http://www.w3schools.com/tags/ref_urlencode.asp
+- SASPolicyKey: previously created “writer” policy key with URL encoded. URL encode tool: http://www.w3schools.com/tags/ref_urlencode.asp
 
-- Eventhub name: previous created event hub name
+- Eventhub name: previouly created event hub name
 
 ### Configure ReceiverViaStorm
 
-Open Config.properties file and change below content to your actual value:
+Open Config.properties file and change below content with your actual value:
 
 - eventhubspout.username={eventhub sas policy name}
 
@@ -82,7 +82,7 @@ Open Config.properties file and change below content to your actual value:
 
 ## Running the Sample
 
-In Eclipse, run LogTopology class of ReceiverViaStorm to get it start for all partitions.
+In Eclipse, run LogTopology class of ReceiverViaStorm to get it ready for all partitions.
 
 Run SenderViaJMS to send messages, then you will see events appear on receiver window.
 
